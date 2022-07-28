@@ -15,7 +15,7 @@ const Home: NextPage = () => {
   }
 
   return (
-    <ShopLayout title={'Teslo Shop - Home'} pageDescription={'Los mejores productos'}>
+    <ShopLayout title={'Teslo Shop - Home'} pageDescription={'Los mejores productos'} imageFullUrl={'/home-shop.jpg'}>
       <Typography variant='h1' component="h1" >Tienda</Typography>
       <Typography variant='h2' component="h2" >Todos los productos</Typography>
 

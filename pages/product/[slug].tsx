@@ -51,7 +51,7 @@ const ProductPage = ({ product }: Props) => {
   }
 
   return (
-    <ShopLayout title={product.title} pageDescription={product.description}>
+    <ShopLayout title={product.title} pageDescription={product.description} imageFullUrl={product.images[0]}>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={7}>
           <ProductSlideshow images={product.images} />
