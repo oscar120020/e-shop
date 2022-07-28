@@ -113,41 +113,16 @@ const ProductPage = ({ product }: Props) => {
 // *********** use in production ****************
 // *********** use in production ****************
 
-// export const getStaticPaths: GetStaticPaths = async (ctx) => {
-//   const slugs = await getProductsSlug();
+export const getStaticPaths: GetStaticPaths = async (ctx) => {
+  const slugs = await getProductsSlug();
 
-//   return {
-//     paths: slugs.map(slug => ({params: {slug}})),
-//     fallback: "blocking",
-//   };
-// };
+  return {
+    paths: slugs.map(slug => ({params: {slug}})),
+    fallback: "blocking",
+  };
+};
 
-// export const getStaticProps: GetStaticProps = async ({params}) => {
-//   const { slug = "" } = params as { slug: string }
-
-//   const product = await getProductBySlug(slug);
-
-//   if(!product){
-//     return {
-//       redirect:{
-//         destination: "/",
-//         permanent: false
-//       },
-//       revalidate: 86400
-//     }
-//   }
-  
-//   return {
-//     props: {product},
-//   };
-// };
-
-
-// *********** use in develop ****************
-// *********** use in develop ****************
-// *********** use in develop ****************
-
-export const getServerSideProps: GetServerSideProps = async ({params}) => {
+export const getStaticProps: GetStaticProps = async ({params}) => {
   const { slug = "" } = params as { slug: string }
 
   const product = await getProductBySlug(slug);
@@ -166,5 +141,30 @@ export const getServerSideProps: GetServerSideProps = async ({params}) => {
     props: {product},
   };
 };
+
+
+// *********** use in develop ****************
+// *********** use in develop ****************
+// *********** use in develop ****************
+
+// export const getServerSideProps: GetServerSideProps = async ({params}) => {
+//   const { slug = "" } = params as { slug: string }
+
+//   const product = await getProductBySlug(slug);
+
+//   if(!product){
+//     return {
+//       redirect:{
+//         destination: "/",
+//         permanent: false
+//       },
+//       revalidate: 86400
+//     }
+//   }
+  
+//   return {
+//     props: {product},
+//   };
+// };
 
 export default ProductPage;
