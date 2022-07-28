@@ -11,11 +11,11 @@ const Home: NextPage = () => {
   const { products, isLoading } = useProducts<IProduct[]>('/products')
 
   if(isLoading) {
-    return <Loading title="Cargando productos" />
+    return <Loading />
   }
 
   return (
-    <ShopLayout title={'Teslo Shop - Home'} pageDescription={'Los mejores productos'} imageFullUrl={'/home-shop.jpg'}>
+    <ShopLayout title={'Teslo Shop - Home'} pageDescription={'Los mejores productos'} imageFullUrl={`${process.env.HOST_NAME}/home-shop.jpg`}>
       <Typography variant='h1' component="h1" >Tienda</Typography>
       <Typography variant='h2' component="h2" >Todos los productos</Typography>
 
