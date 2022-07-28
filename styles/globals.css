@@ -29,12 +29,12 @@
 }
 
 .btn{
-  border-radius: 3px;
+  border-radius: 3px !important;
 }
 
 .btn:hover {
-  background-color: #274494;
-  color: #fff;
+  background-color: #274494 !important;
+  color: #fff !important;
 }
 
 
