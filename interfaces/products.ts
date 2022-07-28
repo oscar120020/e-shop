@@ -1,4 +1,5 @@
 export interface IProduct {
+    _id: string;
     description: string;
     images: string[];
     inStock: number;
@@ -9,7 +10,8 @@ export interface IProduct {
     title: string;
     type: ValidTypes;
     gender: 'men'|'women'|'kid'|'unisex';
-    _id: string;
+    createdAt: string;
+    updatedAt: string;
 }
 
 
