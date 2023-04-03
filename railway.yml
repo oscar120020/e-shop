@@ -1,0 +1,3 @@
+persist:
+  enabled: true
+  posix: true
