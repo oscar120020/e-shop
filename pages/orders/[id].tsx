@@ -28,6 +28,7 @@ export type OrderResponseBody = {
   id: string;
   status:
     | "COMPLETED"
+    | "CREATED"
     | "SAVED"
     | "APPROVED"
     | "VOIDED"
