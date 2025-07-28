@@ -26,7 +26,7 @@
     "mongoose": "^6.4.4",
     "next": "12.2.2",
     "react": "18.2.0",
-    "next-auth": "4.10.1",
+    "next-auth": "4.24.11",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.33.1",
     "react-slideshow-image": "^4.0.2",
