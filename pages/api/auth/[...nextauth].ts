@@ -1,4 +1,4 @@
-import NextAuth, { NextAuthOptions } from 'next-auth';
+import NextAuth, { Awaitable, NextAuthOptions } from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
 import GithubProvider from 'next-auth/providers/github';
 import GoogleProvider from "next-auth/providers/google";
@@ -16,7 +16,7 @@ export const authOptions: NextAuthOptions = {
         password: {label: 'Contraseña:', type: 'password', placeholder: "Contraseña"}
       },
       async authorize(credentials) {
-        return await checkUserEmailPassword(credentials?.email, credentials?.password)
+        return await checkUserEmailPassword(credentials?.email, credentials?.password) as any
       }
     }),
 
@@ -63,7 +63,7 @@ export const authOptions: NextAuthOptions = {
   
     async session({ session, token, user }){
       
-      session.accessToken = token.accessToken;
+      (session as any).accessToken = token.accessToken;
       session.user = token.user as any;
 
       return session
