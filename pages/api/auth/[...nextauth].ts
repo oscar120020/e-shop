@@ -9,25 +9,25 @@ export const authOptions: NextAuthOptions = {
   // Configure one or more authentication providers
   providers: [
 
-    // Credentials({
-    //   name: 'Custom Login',
-    //   credentials :{
-    //     email: {label: 'Correo:', type: 'email', placeholder: "example@example.com"},
-    //     password: {label: 'Contraseña:', type: 'password', placeholder: "Contraseña"}
-    //   },
-    //   async authorize(credentials) {
-    //     return await checkUserEmailPassword(credentials?.email, credentials?.password) as any
-    //   }
-    // }),
+    Credentials({
+      name: 'Custom Login',
+      credentials :{
+        email: {label: 'Correo:', type: 'email', placeholder: "example@example.com"},
+        password: {label: 'Contraseña:', type: 'password', placeholder: "Contraseña"}
+      },
+      async authorize(credentials) {
+        return await checkUserEmailPassword(credentials?.email, credentials?.password) as any
+      }
+    }),
 
     // GithubProvider({
     //   clientId: process.env.GITHUB_ID || "",
     //   clientSecret: process.env.GITHUB_SECRET || "",
     // }),
-    GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID || "",
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET || ""
-    })
+    // GoogleProvider({
+    //   clientId: process.env.GOOGLE_CLIENT_ID || "",
+    //   clientSecret: process.env.GOOGLE_CLIENT_SECRET || ""
+    // })
     // ...add more providers here
   ],
   secret: process.env.NEXTAUTH_SECRET,
