@@ -31,7 +31,7 @@ import {
 } from "@mui/material";
 import { getProductBySlug } from "../../../database";
 import { useForm } from "react-hook-form";
-import { tesloApi } from "../../../api";
+import { tesloApi } from "../../../baseApi";
 import { ProductModel } from "../../../models";
 import { useRouter } from "next/router";
 

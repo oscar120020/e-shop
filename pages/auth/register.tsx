@@ -3,7 +3,7 @@ import { Box, Button, Chip, Grid, Link, TextField, Typography } from "@mui/mater
 import { AuthLayout } from "../../components/layouts";
 import { useForm } from "react-hook-form";
 import { validations } from "../../helpers";
-import { tesloApi } from "../../api";
+import { tesloApi } from "../../baseApi";
 import { ErrorOutline } from "@mui/icons-material";
 import { useContext, useState } from "react";
 import { useRouter } from "next/router";

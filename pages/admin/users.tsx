@@ -6,7 +6,7 @@ import useSWR from "swr";
 import { Loading } from "../../components/ui";
 import { IUser, ValidRoles } from "../../interfaces";
 import { ChangeEvent, useEffect, useState } from "react";
-import { tesloApi } from "../../api";
+import { tesloApi } from "../../baseApi";
 import axios, { AxiosError } from "axios";
 
 const UsersPage = () => {

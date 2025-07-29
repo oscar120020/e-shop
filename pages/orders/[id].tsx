@@ -21,7 +21,7 @@ import { authOptions } from "../api/auth/[...nextauth]";
 import { getOrderById } from "../../database";
 import { IOrder } from "../../interfaces";
 import { PayPalButtons } from "@paypal/react-paypal-js";
-import { tesloApi } from "../../api";
+import { tesloApi } from "../../baseApi";
 import { useRouter } from "next/router";
 
 export type OrderResponseBody = {

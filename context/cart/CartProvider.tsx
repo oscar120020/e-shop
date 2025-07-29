@@ -3,7 +3,7 @@ import { AddressFormData, ICartProduct, IOrder, OrderSummary } from "../../inter
 import { CartContext, cartReducer } from "./";
 import Cookie from "js-cookie";
 import Cookies from "js-cookie";
-import { tesloApi } from "../../api";
+import { tesloApi } from "../../baseApi";
 import axios, { AxiosError } from "axios";
 
 export interface CartState {
